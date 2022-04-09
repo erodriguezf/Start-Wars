@@ -1,0 +1,12 @@
+<h1> Films </h1>
+
+<div *ngFor="let film of ListFilm; let i=index">
+    <div class="container">
+        <p><strong> Title </strong> :  <span>  {{ film.title }} </span> </p> 
+        <p><strong> Episode Number </strong> :  <span>  {{ film.episode_id }} </span> </p> 
+        <p><strong> Director </strong> :  <span>  {{ film.director }} </span> </p> 
+        <a [routerLink]="['/films/characters',i+1]">Characters</a>
+        <br>
+    </div>
+    <br>
+</div>

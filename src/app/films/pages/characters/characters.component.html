@@ -1,0 +1,34 @@
+<div >
+    <input placeholder="search by color eye." type="text" 
+    [(ngModel)]="eyecolor" (keyup.enter)="filterforeyes(charactersurl)">
+    <input placeholder="search by gender." type="text" 
+    [(ngModel)]="gender"  (keyup.enter)="filterforgender(charactersurl)">
+    <input placeholder="search by film." type="text" 
+    [(ngModel)]="film" (keyup.enter)="filterforfilms(charactersurl)">
+</div>
+<div *ngIf="filter.length>0">
+<ul *ngFor="let item of filter">
+    <app-character  [item]="item">
+
+    </app-character>
+</ul>
+</div>
+
+<div *ngIf="filter.length==0">
+  <div *ngIf="(eyecolor=='' && gender=='' && film=='') else error">
+      
+    <ul *ngFor="let item of charactersurl">
+        <app-character  [item]="item">
+    
+        </app-character>
+    </ul>
+   </div>
+
+   <ng-template #error>
+     <h1  class="error">Information with filters does not exist</h1>
+   </ng-template>
+</div>
+
+<button (click)="back()" class="back">
+  Back
+</button>
