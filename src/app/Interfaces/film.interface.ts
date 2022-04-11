@@ -1,11 +1,11 @@
-export interface Films {
+export interface Details {
     count:    number;
     next:     null;
     previous: null;
-    results:  Result[];
+    results:  Films[];
 }
 
-export interface Result {
+export interface Films {
     title:         string;
     episode_id:    number;
     opening_crawl: string;

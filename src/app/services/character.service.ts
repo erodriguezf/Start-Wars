@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Character } from '../Interfaces/character.interface';
-import {  Result } from '../Interfaces/film.interface';
+import {  Films } from '../Interfaces/film.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +15,8 @@ export class CharacterService {
   return this.http.get<Character>(data);
   }
 
-  public getfilmsofcharacter(film:string): Observable<Result>{
-  return this.http.get<Result>(film);
+  public getfilmsofcharacter(film:string): Observable<Films>{
+  return this.http.get<Films>(film);
   }
 
   public FilterOne(charact:string[], value:string): string[] {
@@ -28,8 +28,7 @@ export class CharacterService {
          if(inputeyes == value){
           filtereyes.push(character);
         }
-       });
-       
+       });  
       }
         return filtereyes;
   }

@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {  Result } from 'src/app/Interfaces/film.interface';
 import { CharacterService } from 'src/app/services/character.service';
 
 @Component({

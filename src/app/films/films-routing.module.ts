@@ -11,7 +11,7 @@ const routes: Routes = [{
       component: ListComponent
     },
     {
-      path: 'characters/:id',
+      path: 'characters_by_film/:id',
       component: CharactersComponent
     },
     {

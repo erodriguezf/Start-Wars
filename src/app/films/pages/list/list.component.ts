@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FilmservicesService } from 'src/app/services/filmservices.service';
-import { Result } from '../../../Interfaces/film.interface';
 import { Films } from 'src/app/Interfaces/film.interface';
 
 @Component({
@@ -9,7 +8,7 @@ import { Films } from 'src/app/Interfaces/film.interface';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  public ListFilm:Result[]=[];
+  public ListFilm:Films[]=[];
   
   constructor(private films:FilmservicesService) {}
 
