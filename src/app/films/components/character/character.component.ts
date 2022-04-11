@@ -7,15 +7,21 @@ import { CharacterService } from 'src/app/services/character.service';
   templateUrl: './character.component.html',
   styleUrls: ['./character.component.scss']
 })
+
 export class CharacterComponent implements OnInit {
-   @Input() item!:string;
+   @Input () item!:string;
+   @Input () filtercolor!:string ;
+   @Input () filtergender!:string;
+   @Input () filterfilm!:string;
    public Character!:Character;
+   public load:boolean=false;
    
   constructor(private character:CharacterService) { }
 
   ngOnInit(): void {
      this.character.getcharacter(this.item).subscribe(info=>{
        this.Character=info;
+       this.load=true;
      })
   }
 

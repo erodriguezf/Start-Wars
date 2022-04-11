@@ -6,9 +6,12 @@ import { CharacterService } from 'src/app/services/character.service';
   templateUrl: './film.component.html',
   styleUrls: ['./film.component.scss']
 })
+
 export class FilmComponent implements OnInit {
   @Input() film!:string;
+  @Input() filterfilname!:string;
   public Film!:string;
+
   constructor(private character:CharacterService) { }
 
   ngOnInit(): void {

@@ -35,7 +35,7 @@ export class CharactersComponent implements OnInit {
     )
   }
   
-  public back():void{
+  public Back():void{
    this.Route.navigate(['/films/list'])
   }
 

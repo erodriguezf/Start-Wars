@@ -7,14 +7,17 @@ import { Films } from 'src/app/Interfaces/film.interface';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
+
 export class ListComponent implements OnInit {
   public ListFilm:Films[]=[];
+  public load:boolean=false;
   
   constructor(private films:FilmservicesService) {}
 
   ngOnInit(): void {
     this.films.getFilms().subscribe(films =>{
       this.ListFilm=films.results;
+      this.load=true;
      })
   }
 
