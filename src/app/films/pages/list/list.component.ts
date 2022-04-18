@@ -15,10 +15,18 @@ export class ListComponent implements OnInit {
   constructor(private films:FilmservicesService) {}
 
   ngOnInit(): void {
+    this.init();
+  }
+
+  public init():void{
     this.films.getFilms().subscribe(films =>{
       this.ListFilm=films.results;
       this.load=true;
      })
   }
 
+
+
 }
+
+

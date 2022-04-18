@@ -7,19 +7,23 @@ import { CharactersComponent } from './films/pages/characters/characters.compone
 import { HttpClientModule } from '@angular/common/http';
 import { FilmsModule } from './films/films.module';
 import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { ImagepipePipe } from './pipes/imagepipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     CharactersComponent,
+    ImagepipePipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FilmsModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -19,10 +19,14 @@ export class CharacterComponent implements OnInit {
   constructor(private character:CharacterService) { }
 
   ngOnInit(): void {
-     this.character.getcharacter(this.item).subscribe(info=>{
-       this.Character=info;
-       this.load=true;
-     })
+    this.init();
+  }
+
+  public init():void{
+    this.character.getcharacter(this.item).subscribe(info=>{
+      this.Character=info;
+      this.load=true;
+    })
   }
 
 }

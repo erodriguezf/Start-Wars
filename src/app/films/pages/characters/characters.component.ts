@@ -18,6 +18,7 @@ export class CharactersComponent implements OnInit {
   public filtergender:string[]=[];
   public filterfilm:string[]=[];
   public filter:string[]=[];
+  public page:number=1;
   
   constructor(private activated:ActivatedRoute, 
               private filservice:FilmservicesService,
@@ -28,9 +29,13 @@ export class CharactersComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.init();
+  }
+
+  public init():void{
     this.activated.params.subscribe(({id})=>
       this.filservice.getFilmsbyId(id).subscribe(data =>{
-          this.charactersurl = data.characters.splice(0,10);
+          this.charactersurl = data.characters;
       })
     )
   }

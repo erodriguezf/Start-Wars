@@ -15,9 +15,13 @@ export class FilmComponent implements OnInit {
   constructor(private character:CharacterService) { }
 
   ngOnInit(): void {
+   this.init();
+  }
+
+  public init(){
     this.character.getfilmsofcharacter(this.film).subscribe(info=>{
-       this.Film=info.title;
-    })
+      this.Film=info.title;
+   })
   }
 
 }

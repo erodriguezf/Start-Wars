@@ -1,19 +1,36 @@
-.container{
-    height: 25%;
-    border: solid 1px;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+.content{
+  width: 100%;
+  display:inline-flex;
+  justify-content: space-around;
+  @media(max-width:500px){
+   display: inline-block;
+  }
+ 
 }
-
+.container{
+    height: 100%;
+    width: 100%;
+    border: solid 1px yellow;
+    background-color: black;
+   
+}
+img{
+  width: 100%;
+  margin-top: 1rem;
+}
 p, a{
     margin-left: 1rem;
+    color: yellow;
 }
 
 h1{
  margin-left: auto;
  margin-right: auto;
  text-align: center;
+ color: yellow;
 }
+
+
 
 .overlay{
     z-index: 2;

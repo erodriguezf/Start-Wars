@@ -12,7 +12,7 @@
 </div>
 
 <div *ngIf="filter.length>0">
-<ul *ngFor="let item of filter">
+<ul *ngFor="let item of (filter|paginate:{itemsPerPage: 10, currentPage: page}) ">
     <app-character  [item]="item" [filtercolor]="eyecolor" 
     [filtergender]="gender" [filterfilm]="film">
 
@@ -22,7 +22,7 @@
 
 <div *ngIf="filter.length==0">
   <div *ngIf="(eyecolor=='' && gender=='' && film=='') else error">
-    <ul *ngFor="let item of charactersurl">
+    <ul *ngFor="let item of (charactersurl|paginate:{itemsPerPage: 10, currentPage: page})">
         <app-character  [item]="item">
     
         </app-character>
@@ -33,6 +33,14 @@
      <h1  class="error">Information with filters does not exist</h1>
    </ng-template>
 </div>
+
+<pagination-controls 
+                      (pageChange)="page=$event"
+                      previousLabel="Previous"
+                      nextLabel="Next"
+                      class="custom-pagination"
+                     >
+</pagination-controls>
 
 <button (click)="Back()" class="back">
   Back
