@@ -11,18 +11,11 @@ import { FilmservicesService } from 'src/app/services/filmservices.service';
 
 export class CharactersComponent implements OnInit {
   public charactersurl:string[]=[];
-  public eyecolor:string='';
-  public gender:string='';
-  public film:string='';
-  public filtereyecolor:string[]=[];
-  public filtergender:string[]=[];
-  public filterfilm:string[]=[];
-  public filter:string[]=[];
+  public criteria:string='';
   public page:number=1;
   
   constructor(private activated:ActivatedRoute, 
               private filservice:FilmservicesService,
-              private character:CharacterService,
               private Route:Router) 
   {
    
@@ -43,26 +36,5 @@ export class CharactersComponent implements OnInit {
   public Back():void{
    this.Route.navigate(['/films/list'])
   }
-
-  public filterforeyes(charact:string[]):void{
-      this.filtereyecolor = this.character.FilterOne(charact,this.eyecolor);
-      this.filter=this.filtereyecolor;
-      this.gender='';
-      this.film='';
-  }
-
-  public filterforgender(charact:string[]):void{
-      this.filtergender= this.character.FilterTwo(charact,this.gender);
-     this.filter=this.filtergender;
-      this.eyecolor='';
-      this.film='';
-  }
-
-  public filterforfilms(charact:string[]):void{
-   this.filterfilm=this.character.FilterTree(charact,this.film);
-   this.filter=this.filterfilm;
-   this.eyecolor='';
-   this.gender='';
-  }
-
+  
 }

@@ -9,6 +9,7 @@ import { FilmsModule } from './films/films.module';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ImagepipePipe } from './pipes/imagepipe.pipe';
+import { FilterpipePipe } from './pipes/filterpipe.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ImagepipePipe } from './pipes/imagepipe.pipe';
     ListComponent,
     CharactersComponent,
     ImagepipePipe,
+    FilterpipePipe,
   ],
   imports: [
     BrowserModule,

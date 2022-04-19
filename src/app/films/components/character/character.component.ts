@@ -13,6 +13,7 @@ export class CharacterComponent implements OnInit {
    public Character!:Character;
    public load:boolean=false;
    
+   
   constructor(private character:CharacterService) { }
 
   ngOnInit(): void {
