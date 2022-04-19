@@ -10,9 +10,6 @@ import { CharacterService } from 'src/app/services/character.service';
 
 export class CharacterComponent implements OnInit {
    @Input () item!:string;
-   @Input () filtercolor!:string ;
-   @Input () filtergender!:string;
-   @Input () filterfilm!:string;
    public Character!:Character;
    public load:boolean=false;
    

@@ -3,18 +3,12 @@
     <input placeholder="search by color eye." type="text" 
     [(ngModel)]="eyecolor" (keyup.enter)="filterforeyes(charactersurl)"
     >
-    <input placeholder="search by gender." type="text" 
-    [(ngModel)]="gender"  (keyup.enter)="filterforgender(charactersurl)"
-    >
-    <input placeholder="search by film." type="text" 
-    [(ngModel)]="film" (keyup.enter)="filterforfilms(charactersurl)"
-    >
+    
 </div>
 
 <div *ngIf="filter.length>0">
 <ul *ngFor="let item of (filter|paginate:{itemsPerPage: 10, currentPage: page}) ">
-    <app-character  [item]="item" [filtercolor]="eyecolor" 
-    [filtergender]="gender" [filterfilm]="film">
+    <app-character  [item]="item" >
 
     </app-character>
   </ul>

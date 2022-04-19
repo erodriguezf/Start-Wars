@@ -9,11 +9,11 @@
 <div *ngIf="load">
 <div class="container">
     <p><strong> Name </strong> :  <span>  {{ Character.name }} </span> </p> 
-    <p [ngClass]="{'filtereye':filtercolor === Character.eye_color }"><strong> Eye_color </strong> :  <span >  {{ Character.eye_color }} </span> </p> 
-    <p [ngClass]="{'filtergender':filtergender === Character.gender }"><strong> Gender </strong> :  <span >  {{ Character.gender }} </span> </p> 
+    <p ><strong> Eye_color </strong> :  <span >  {{ Character.eye_color }} </span> </p> 
+    <p ><strong> Gender </strong> :  <span >  {{ Character.gender }} </span> </p> 
     <p><strong>Films: </strong></p>
     <ul *ngFor="let film of Character.films">
-        <app-film [film]="film" [filterfilname]="filterfilm">
+        <app-film [film]="film" >
 
         </app-film>
     </ul>

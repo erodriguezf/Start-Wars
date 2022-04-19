@@ -9,7 +9,6 @@ import { CharacterService } from 'src/app/services/character.service';
 
 export class FilmComponent implements OnInit {
   @Input() film!:string;
-  @Input() filterfilname!:string;
   public Film!:string;
 
   constructor(private character:CharacterService) { }
