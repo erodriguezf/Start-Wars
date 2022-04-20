@@ -10,8 +10,7 @@ import { Films } from 'src/app/Interfaces/film.interface';
 
 export class ListComponent implements OnInit {
   public ListFilm:Films[]=[];
-  public load:boolean=false;
-  
+
   constructor(private films:FilmservicesService) {}
 
   ngOnInit(): void {
@@ -21,7 +20,7 @@ export class ListComponent implements OnInit {
   public init():void{
     this.films.getFilms().subscribe(films =>{
       this.ListFilm=films.results;
-      this.load=true;
+      
      })
   }
 

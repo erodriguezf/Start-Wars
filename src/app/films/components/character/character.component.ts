@@ -11,7 +11,7 @@ import { CharacterService } from 'src/app/services/character.service';
 export class CharacterComponent implements OnInit {
    @Input () item!:string;
    public Character!:Character;
-   public load:boolean=false;
+  
    
    
   constructor(private character:CharacterService) { }
@@ -23,7 +23,7 @@ export class CharacterComponent implements OnInit {
   public init():void{
     this.character.getcharacter(this.item).subscribe(info=>{
       this.Character=info;
-      this.load=true;
+     
     })
   }
 
