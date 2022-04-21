@@ -7,7 +7,6 @@ import { Films } from 'src/app/Interfaces/film.interface';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-
 export class ListComponent implements OnInit {
   public ListFilm:Films[]=[];
 
@@ -20,12 +19,8 @@ export class ListComponent implements OnInit {
   public init():void{
     this.films.getFilms().subscribe(films =>{
       this.ListFilm=films.results;
-      
      })
   }
-
-
-
 }
 
 

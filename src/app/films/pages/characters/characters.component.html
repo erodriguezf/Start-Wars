@@ -1,15 +1,11 @@
 <h1> Characters </h1>
 <div >
     <input placeholder="filters." type="text" 
-    [(ngModel)]="criteria" >
-    
+    [(ngModel)]="criteria" >  
 </div>
-    <ul *ngFor="let item of ((charactersurl|filterpipe:criteria)|paginate:{itemsPerPage: 10, currentPage: page})">
-        <app-character  [item]="item">
-    
-        </app-character>
-      </ul>
-
+<ul *ngFor="let item of ((charactersurl|filterpipe:criteria)|paginate:{itemsPerPage: 10, currentPage: page})">
+    <app-character  [item]="item"></app-character>
+</ul>
 <pagination-controls 
                       (pageChange)="page=$event"
                       previousLabel="Previous"
@@ -17,7 +13,6 @@
                       class="custom-pagination"
                      >
 </pagination-controls>
-
 <button (click)="Back()" class="back">
   Back
 </button>

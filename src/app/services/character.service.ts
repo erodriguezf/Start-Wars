@@ -19,6 +19,4 @@ export class CharacterService {
   public getfilmsofcharacter(film:string): Observable<Films>{
   return this.http.get<Films>(film);
   }
-
-
 }

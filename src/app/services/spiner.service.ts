@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import {  Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class SpinerService {
   public isloading:Subject<boolean>=new Subject<boolean>();
 
@@ -16,6 +17,4 @@ export class SpinerService {
   public hide():void{
     this.isloading.next(false);
   }
-
-
 }

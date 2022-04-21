@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CharacterService } from 'src/app/services/character.service';
 import { FilmservicesService } from 'src/app/services/filmservices.service';
 
 @Component({
@@ -16,10 +15,7 @@ export class CharactersComponent implements OnInit {
   
   constructor(private activated:ActivatedRoute, 
               private filservice:FilmservicesService,
-              private Route:Router) 
-  {
-   
-   }
+              private Route:Router) {}
 
   ngOnInit(): void {
     this.init();
@@ -36,5 +32,4 @@ export class CharactersComponent implements OnInit {
   public Back():void{
    this.Route.navigate(['/films/list'])
   }
-  
 }

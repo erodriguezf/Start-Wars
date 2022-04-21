@@ -22,5 +22,4 @@ export class FilmComponent implements OnInit {
       this.Film=info.title;
    })
   }
-
 }

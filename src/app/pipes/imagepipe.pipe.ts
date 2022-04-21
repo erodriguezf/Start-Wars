@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ImagepipePipe implements PipeTransform {
 
-  transform(value: number,): string {
+  transform(value: number): string {
     return `../../../../assets/IMG/IMG${value}.jpg`;
   }
 

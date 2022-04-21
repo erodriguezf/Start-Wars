@@ -12,8 +12,6 @@ export class CharacterComponent implements OnInit {
    @Input () item!:string;
    public Character!:Character;
   
-   
-   
   constructor(private character:CharacterService) { }
 
   ngOnInit(): void {
@@ -23,8 +21,6 @@ export class CharacterComponent implements OnInit {
   public init():void{
     this.character.getcharacter(this.item).subscribe(info=>{
       this.Character=info;
-     
     })
   }
-
 }
