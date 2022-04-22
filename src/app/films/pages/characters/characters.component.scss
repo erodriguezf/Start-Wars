@@ -1,31 +1,11 @@
 input {
-    margin-left: 2.5rem;
     display: inline;
-    width: 93.5%;
-    border: solid 1px yellow;
+    width: 99.5%;
+    border: solid 1px yellow ;
     color: yellow;
     background-color: black;
-
-    @media (max-width: 500px) {
-      margin-left: 2.5rem;
-      width: 40%;
-      margin-top: 1rem;
-      display: inline-block;
-    }
-
-    @media (max-width: 710px) {
-      margin-left: 2.9rem;
-      width: 40%;
-      margin-top: 1rem;
-    }
-
-    @media (max-width: 920px) {
-      margin-left: 2.5rem;
-      width: 74%;
-      margin-top: 1rem;
-    }
 }
-
+   
 h1{
   margin-left: auto;
   margin-right: auto;
@@ -55,4 +35,12 @@ h1{
 .custom-pagination ::ng-deep .ngx-pagination .disabled{
   background:black;
   color: yellow;
+}
+
+.container{
+  height: 28.9%;
+  border: solid 1px;
+  margin-right: 2.5rem;
+  margin-left: 2.5rem;
+  background-color: black;
 }

@@ -16,6 +16,7 @@ export class FilterpipePipe implements PipeTransform {
   filtercharacterbyfeature(listoffilm:string[], filter:string): string[]{
     let filters:string[]=[];
     let films:string[]=[];
+    let charactersname:string[]=[];
     
     if(!filter){
        return listoffilm;
@@ -32,13 +33,16 @@ export class FilterpipePipe implements PipeTransform {
            for(let film of films){
              this.characterservice.getfilmsofcharacter(film).subscribe(namefilm=>{
                if(namefilm.title.startsWith(filter)){
-                 filters.push(lis);
+                 if(charactersname.indexOf(info.name)<0){
+                   charactersname.push(info.name)
+                   filters.push(lis);
+                 }
                }
              })
            }
         }
       })
    }
-    return filters;
+   return filters;
   }
 }
