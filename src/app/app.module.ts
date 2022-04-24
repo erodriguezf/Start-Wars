@@ -30,7 +30,7 @@ import { IntersectorInterceptor } from './Intersector/intersector.interceptor';
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass:IntersectorInterceptor, multi:true}
-],
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

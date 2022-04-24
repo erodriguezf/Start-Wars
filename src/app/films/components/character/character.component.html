@@ -4,9 +4,7 @@
     <p ><strong> Gender </strong> :  <span >  {{ Character.gender }} </span> </p> 
     <p><strong>Films: </strong></p>
     <ul *ngFor="let film of Character.films">
-        <app-film [film]="film" >
-
-        </app-film>
+        <app-film [film]="film" ></app-film>
     </ul>
     <br>
 </div>

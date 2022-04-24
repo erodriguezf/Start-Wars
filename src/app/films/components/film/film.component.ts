@@ -17,7 +17,7 @@ export class FilmComponent implements OnInit {
    this.init();
   }
 
-  public init(){
+  public init():void{
     this.character.getfilmsofcharacter(this.film).subscribe(info=>{
       this.Film=info.title;
    })

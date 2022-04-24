@@ -2,7 +2,7 @@
   width: 100%;
   display:inline-flex;
   justify-content: space-around;
-  @media(max-width:500px){
+  @media(max-width:600px){
    display: inline-block;
   }
 }
@@ -15,9 +15,17 @@
    
 }
 
+.container-img{
+  width: 100%;
+}
+
 img{
   width: 100%;
+  height: 50vh;
   margin-top: 1rem;
+  @media(max-width:600px){
+    height: 100vh;
+  }
 }
 
 p, a{
@@ -30,4 +38,7 @@ h1{
  margin-right: auto;
  text-align: center;
  color: yellow;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ font-style: italic;
+ font-weight: bold;
 }

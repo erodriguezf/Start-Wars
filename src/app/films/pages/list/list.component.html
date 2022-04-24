@@ -6,7 +6,9 @@
         <p><strong> Episode Number </strong> :  <span>  {{ film.episode_id }} </span> </p> 
         <p><strong> Director </strong> :  <span>  {{ film.director }} </span> </p> 
         <a [routerLink]="['/films/characters_by_film',i+1]">Characters</a>
-        <img src="{{i|imagepipe}}">
+        <div class="container-img">
+            <img src="{{i|imagepipe}}">
+        </div>
     </div>
     <br>
 </div>
