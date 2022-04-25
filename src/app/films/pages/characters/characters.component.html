@@ -4,13 +4,16 @@
     [(ngModel)]="criteria" >  
 </div>
 <ul *ngFor="let item of ((charactersurl|filterpipe:criteria)|paginate:{itemsPerPage: 10, currentPage: page})">
-    <app-character   [item]="item"></app-character>
+    <app-character  [item]="item"></app-character>
 </ul>
+<div class="pagination">
 <pagination-controls 
                       (pageChange)="page=$event"
                       previousLabel="Previous"
                       nextLabel="Next"
                       class="custom-pagination"
+                      [responsive]="true"
                      >
 </pagination-controls>
+</div>
 <button (click)="Back()" class="back">Back</button>

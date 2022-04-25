@@ -17,7 +17,7 @@ export class FilmservicesService {
   }
 
   public getFilmsbyId(id:string):Observable<Films>{
-    const filid:string=`${environment.url}/${id}`;
-    return this.http.get<Films>(filid);
+    const filmid:string=`${environment.url}/${id}`;
+    return this.http.get<Films>(filmid);
   }
 }

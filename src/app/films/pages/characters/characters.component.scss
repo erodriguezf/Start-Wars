@@ -24,12 +24,6 @@ h1{
   border: solid 1px yellow;
 }
 
-.error {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
 .custom-pagination ::ng-deep .ngx-pagination .current{
   background:black;
   color: yellow;
@@ -40,10 +34,27 @@ h1{
   color: yellow;
 }
 
+.custom-pagination ::ng-deep  a{
+  background:yellow;
+  color: black;
+}
+
+.custom-pagination ::ng-deep .ngx-pagination.responsive .small-screen {
+  @media  (max-width: 601px){
+  display: inline-block;
+  color: yellow;
+  }
+}
+
 .container{
   height: 28.9%;
   border: solid 1px;
   margin-right: 2.5rem;
   margin-left: 2.5rem;
   background-color: black;
+}
+
+.pagination{
+  margin-right: 2.5rem;
+  text-align: center;
 }

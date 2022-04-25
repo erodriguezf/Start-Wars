@@ -17,22 +17,22 @@ export class FilterpipePipe implements PipeTransform {
     let filters:string[]=[];
     let films:string[]=[];
     let charactersname:string[]=[];
-    
+   
     if(!filter){
        return listoffilm;
     }
 
     for(let lis of listoffilm){
       this.characterservice.getcharacter(lis).subscribe(info=>{
-        if(info.eye_color.startsWith(filter)){
+        if(info.eye_color.startsWith(filter.trim())){
              filters.push(lis);
-        }else if(info.gender.startsWith(filter)){
+        }else if(info.gender.startsWith(filter.trim())){
            filters.push(lis);
         }else {
            films=info.films;
            for(let film of films){
              this.characterservice.getfilmsofcharacter(film).subscribe(namefilm=>{
-               if(namefilm.title.startsWith(filter)){
+               if(namefilm.title.startsWith(filter.trim())){
                  if(charactersname.indexOf(info.name)<0){
                    charactersname.push(info.name)
                    filters.push(lis);
